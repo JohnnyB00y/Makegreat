@@ -1,0 +1,6 @@
+<%= form_for([@magazine, @magazine.links.build]) do |f| %>
+  <%= f.url_field :url, placeholder: 'what is the url' %>
+  <%= f.text_field :commentary, placeholder: '(optional)' %>
+
+  <%= f.submit %>
+<% end %>
