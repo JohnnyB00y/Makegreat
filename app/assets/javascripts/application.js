@@ -28,3 +28,10 @@ document.addEventListener("turbolinks:load", function() {
       }
   });
 });
+
+$( function() {
+  $( "#links_wrapper" ).sortable({
+    placeholder: "ui-state-highlight"
+  });
+  $( "#links_wrapper" ).disableSelection();
+} );
