@@ -10,7 +10,7 @@
   <%= @magazine.description %>
 </p>
 
-<div id="links_wrapper">
+<div id="links_wrapper" data-url=" <%= sort_magazine_links_path(@magazine) %> ">
   <%= render @magazine.links %>
   <div id="link_form">
     <%= render "links/form" %>

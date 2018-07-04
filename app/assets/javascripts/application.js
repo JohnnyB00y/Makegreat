@@ -11,5 +11,20 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
+//= require jquery-ui/widget
+//= require jquery-ui/widgets/sortable
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  $("#links_wrapper").sortable({
+    update: function(e, ui) {
+      $.ajax({
+          url: $(this).data("url"),
+          type: "PATCH",
+          data: $(this).sortable('serialize'),
+        });
+      }
+  });
+});

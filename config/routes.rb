@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :magazines do
-    resources :links
+    resources :links do
+      collection do
+        patch :sort
+      end
+    end
   end
 
   root 'magazines#index'
